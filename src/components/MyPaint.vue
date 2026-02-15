@@ -278,10 +278,12 @@ export default {
         case 8: newObj = this.drawLine(pointer); break
         case 10: newObj = this.drawArrow(pointer); break
         case 13: newObj = this.drawText(pointer); break
-        case 19: 
+        case 19: {
           const delta = new fabric.Point(e.e.movementX, e.e.movementY)
           this.myCanvas.relativePan(delta)
           return
+        }
+
       }
 
       if (this.drawingObj) this.myCanvas.remove(this.drawingObj)
@@ -369,7 +371,7 @@ export default {
     // --- STUB METODI MANCANTI (da implementare se serve logica complessa) ---
     doNewPage() { this.cleanCanvas(); const n = this.pagesList.length + 1; this.pagesList.push({pageNo: n, pageName: 'Page'+n}) },
     doChangePage() { this.getCanvasData(this.pageSel) },
-    zoomOutIn(val) { /* logica zoom */ },
+    zoomOutIn() { /* logica zoom */ },
     doUndo() { /* logica undo */ }
   }
 }
