@@ -25,7 +25,6 @@ module.exports = defineConfig({
     externals: {
       'vue': 'Vue',
       'vuetify': 'Vuetify',
-      'crypto-js': 'CryptoJS',
       'fabric': 'fabric',
       'localforage': 'localforage',
       'vuedraggable': 'vuedraggable',
